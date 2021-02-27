@@ -2,6 +2,10 @@ $(document).on(typeof Turbolinks === 'undefined' ? 'ready' : 'turbolinks:load', 
   let editor, updatedJson;
   $('.administrate-jsoneditor').each(function(index) {
 
+    if ($(this).find(".jsoneditor").length > 0) {
+      return;
+    }
+
     let $current = $(this).find("textarea");
 
     let options = {
