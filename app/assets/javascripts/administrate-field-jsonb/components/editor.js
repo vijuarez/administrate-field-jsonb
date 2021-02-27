@@ -11,6 +11,10 @@
       return;
     }
 
+    if ($(this).querySelectorAll(".jsoneditor").length > 0) {
+      return;
+    }
+
     let $current = $(this).find("textarea");
 
       let options = {
