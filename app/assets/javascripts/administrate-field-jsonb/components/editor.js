@@ -7,7 +7,11 @@
     let editor, updatedJson;
     $('.administrate-jsoneditor').each(function (index) {
 
-      let $current = $(this).find("textarea");
+    if ($(this).find(".jsoneditor").length > 0) {
+      return;
+    }
+
+    let $current = $(this).find("textarea");
 
       let options = {
         onChange: function () {
